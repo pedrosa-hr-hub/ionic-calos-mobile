@@ -35,7 +35,7 @@
         <ion-input type="text" placeholder="Insira seu estado"></ion-input>
       </ion-item>
       <br>
-      <ion-button color="success">Enviar Voto</ion-button>
+      <ion-button color="success" href="/login">Enviar Voto</ion-button>
     </div>
   </template>
   
