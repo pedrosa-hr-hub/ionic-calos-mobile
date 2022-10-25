@@ -4,14 +4,14 @@
       <ion-label position="stacked">
         E-Mail
       </ion-label>
-      <ion-input type="email" placeholder="E-mail"></ion-input>
+      <ion-input type="email" placeholder="E-mail" v-model="input.email"></ion-input>
     </ion-item>
     <br>
     <ion-item>
       <ion-label position="stacked">
         Senha
       </ion-label>
-      <ion-input type="password" placeholder="*****"></ion-input>
+      <ion-input type="password" placeholder="*****" v-model="input.voto"></ion-input>
     </ion-item>
     <br>
     <ion-button color="success">Entrar</ion-button>
@@ -24,6 +24,14 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'LoginForm',
+  data(){
+    return{
+      input: {
+          email: '',
+          voto: '',
+      }
+    }
+  }
 });
 </script>
 

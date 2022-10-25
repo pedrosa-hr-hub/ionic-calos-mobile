@@ -17,7 +17,7 @@ import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue
 import LoginForm from '@/components/LoginForm.vue';
 
 export default  defineComponent({
-  name: 'Tab1Page',
+  name: 'LoginPage',
   components: { LoginForm, IonHeader, IonToolbar, IonTitle, IonContent, IonPage }
 });
 </script>

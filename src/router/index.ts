@@ -22,7 +22,15 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: 'voto',
         component: () => import('@/views/Voto.vue')
-      }
+      },
+      {
+        path: 'dados',
+        component: () => import('@/views/Dados.vue')
+      },
+      {
+        path: 'sintetico',
+        component: () => import('@/views/DadosSinteticos.vue')
+      },
     ]
   }
 ]

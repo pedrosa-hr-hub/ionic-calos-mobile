@@ -6,7 +6,7 @@
         </ion-toolbar>
       </ion-header>
       <ion-content :fullscreen="true">
-        <VotoForm/>
+        <Dados/>
       </ion-content>
     </ion-page>
   </template>
@@ -14,11 +14,11 @@
   <script lang="ts">
   import { defineComponent } from 'vue';
   import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
-  import VotoForm from '@/components/VotoForm.vue';
+  import Dados from '@/components/Dados.vue';
   
   export default  defineComponent({
-    name: 'VotoPage',
-    components: { VotoForm, IonHeader, IonToolbar, IonTitle, IonContent, IonPage }
+    name: 'DadosPage',
+    components: { Dados, IonHeader, IonToolbar, IonTitle, IonContent, IonPage }
   });
   </script>
   
