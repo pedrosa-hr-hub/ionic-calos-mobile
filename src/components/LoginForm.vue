@@ -6,12 +6,15 @@
       </ion-label>
       <ion-input type="email" placeholder="E-mail"></ion-input>
     </ion-item>
+    <br>
     <ion-item>
       <ion-label position="stacked">
         Senha
       </ion-label>
       <ion-input type="password" placeholder="*****"></ion-input>
     </ion-item>
+    <br>
+    <ion-button color="success">Entrar</ion-button>
   </div>
 </template>
 
@@ -27,9 +30,11 @@ export default defineComponent({
 <style scoped>
 #container {
   text-align: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 30%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 30%;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 </style>
