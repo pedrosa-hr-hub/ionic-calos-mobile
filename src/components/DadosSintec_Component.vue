@@ -7,11 +7,15 @@
   </template>
   
   <script lang="ts">
-  import { IonInput, IonItem, IonLabel } from '@ionic/vue';
+  import { IonItem, IonButton } from '@ionic/vue';
   import { defineComponent } from 'vue';
   
   export default defineComponent({
     name: 'DadosSintecComponent',
+    components:{
+      IonItem,
+      IonButton
+    },
     data(){
     return{
       voto: [],

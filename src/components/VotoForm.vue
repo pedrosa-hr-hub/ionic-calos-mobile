@@ -1,53 +1,64 @@
 <template>
     <div id="container">
+      <form v-on:submit.prevent="submitForm">
       <ion-item>
         <ion-label position="stacked">
           Voto
         </ion-label>
-        <ion-input type="text" placeholder="Budweiser ou Heineken" v-model="input.voto"></ion-input>
+        <ion-input type="text" placeholder="Budweiser ou Heineken" name="voto" v-model="form.voto"></ion-input>
       </ion-item>
       <br>
       <ion-item>
         <ion-label position="stacked">
           E-mail
         </ion-label>
-        <ion-input type="email" placeholder="exemplo@outlook.com" v-model="input.email"></ion-input>
+        <ion-input type="email" placeholder="exemplo@outlook.com" name="email" v-model="form.email"></ion-input>
       </ion-item>
       <br>
       <ion-item>
         <ion-label position="stacked">
           Nome
         </ion-label>
-        <ion-input type="text" placeholder="Insira seu nome" v-model="input.nome"></ion-input>
+        <ion-input type="text" placeholder="Insira seu nome" name="nome" v-model="form.nome"></ion-input>
       </ion-item>
       <br>
       <ion-item>
         <ion-label position="stacked">
           Cidade
         </ion-label>
-        <ion-input type="text" placeholder="Insira sua cidade" v-model="input.cidade"></ion-input>
+        <ion-input type="text" placeholder="Insira sua cidade" name="cidade" v-model="form.cidade"></ion-input>
       </ion-item>
       <br>
       <ion-item>
         <ion-label position="stacked">
           Estado
         </ion-label>
-        <ion-input type="text" placeholder="Insira seu estado" v-model="input.estado"></ion-input>
+        <ion-input type="text" placeholder="Insira seu estado" name="estado" v-model="form.estado"></ion-input>
       </ion-item>
       <br>
-      <ion-button color="success" href="/login">Enviar Voto</ion-button>
+      <ion-button color="success" type="submit">Enviar Voto</ion-button>
+    </form>
     </div>
   </template>
   
   <script lang="ts">
   import { IonInput, IonItem, IonLabel, IonButton } from '@ionic/vue';
   import { defineComponent } from 'vue';
+  import axios from 'axios';
+  import router from '@/router';
+  import { RouteLocationRaw } from 'vue-router';
   
   export default defineComponent({
-    name: 'LoginForm',
+    name: 'VotoForm',
+    components:{
+      IonButton,
+      IonInput,
+      IonLabel,
+      IonItem
+    },
     data(){
     return{
-      input: {
+      form: {
           voto: '',
           email: '',
           nome: '',
@@ -55,8 +66,31 @@
           estado: '',
       }
     }
-  }
+  },
+    methods: {
+      alert_sucess(response: number){
+        alert(response);
+    },
+    alert_error(error: number){
+      alert(error);
+    },
+    chageRoute(route: RouteLocationRaw){
+      router.push(route);
+    },
+    submitForm(){
+      axios.post('http://localhost:8999/voto', this.form)
+      .then((res) =>{
+          this.alert_sucess(res.status);
+          this.chageRoute('/login');
+      })
+      .catch((error) => {
+          this.alert_error(error);
+          console.log(error)
+      })
+      }
+    }
   });
+  
   </script>
   
   <style scoped>
