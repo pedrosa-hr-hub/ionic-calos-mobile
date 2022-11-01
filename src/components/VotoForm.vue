@@ -44,8 +44,8 @@
   <script lang="ts">
   import { IonInput, IonItem, IonLabel, IonButton } from '@ionic/vue';
   import { defineComponent } from 'vue';
-  import axios from 'axios';
   import router from '@/router';
+  import axios from 'axios';
   import { RouteLocationRaw } from 'vue-router';
   
   export default defineComponent({
@@ -78,7 +78,7 @@
       router.push(route);
     },
     submitForm(){
-      axios.post('http://localhost:8999/voto', this.form)
+      axios.post('http://192.168.0.133:8000/voto', this.form)
       .then((res) =>{
           this.alert_sucess(res.status);
           this.chageRoute('/login');
@@ -88,7 +88,7 @@
           console.log(error)
       })
       }
-    }
+    },
   });
   
   </script>
