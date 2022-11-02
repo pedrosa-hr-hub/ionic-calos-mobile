@@ -78,7 +78,7 @@
       router.push(route);
     },
     submitForm(){
-      axios.post('http://192.168.0.133:8000/voto', this.form)
+      axios.post('http://localhost:8000/voto', this.form)
       .then((res) =>{
           this.alert_sucess(res.status);
           this.chageRoute('/login');
