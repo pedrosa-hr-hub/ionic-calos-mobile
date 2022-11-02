@@ -68,23 +68,15 @@
     }
   },
     methods: {
-      alert_sucess(response: number){
-        alert(response);
-    },
-    alert_error(error: number){
-      alert(error);
-    },
     chageRoute(route: RouteLocationRaw){
       router.push(route);
     },
     submitForm(){
       axios.post('http://localhost:8000/voto', this.form)
       .then((res) =>{
-          this.alert_sucess(res.status);
           this.chageRoute('/login');
       })
       .catch((error) => {
-          this.alert_error(error);
           console.log(error)
       })
       }
@@ -104,4 +96,3 @@
     padding-right: 30px;
   }
   </style>
-  
