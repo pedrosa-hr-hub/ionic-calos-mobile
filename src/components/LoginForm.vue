@@ -46,7 +46,7 @@ export default defineComponent({
       router.push(route);
     },
     submitForm(){
-      axios.post('/http://localhost:8000/user', this.input)
+      axios.post('http://localhost:8000/user', this.input)
       .then(() =>{
         this.chageRoute('/dados');
       })
