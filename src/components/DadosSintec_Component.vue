@@ -6,7 +6,7 @@
     </div>
   </template>
   
-  <script lang="ts">
+  <script>
   import { IonItem, IonButton } from '@ionic/vue';
   import { defineComponent } from 'vue';
   

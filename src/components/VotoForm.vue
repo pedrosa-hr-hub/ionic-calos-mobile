@@ -41,12 +41,11 @@
     </div>
   </template>
   
-  <script lang="ts">
+  <script>
   import { IonInput, IonItem, IonLabel, IonButton } from '@ionic/vue';
   import { defineComponent } from 'vue';
   import router from '@/router';
   import axios from 'axios';
-  import { RouteLocationRaw } from 'vue-router';
   
   export default defineComponent({
     name: 'VotoForm',
@@ -68,7 +67,7 @@
     }
   },
     methods: {
-    chageRoute(route: RouteLocationRaw){
+    chageRoute(route){
       router.push(route);
     },
     submitForm(){

@@ -20,12 +20,11 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { IonInput, IonItem, IonLabel } from '@ionic/vue';
 import { defineComponent } from 'vue';
 import axios from 'axios';
 import router from '@/router';
-import { RouteLocationRaw } from 'vue-router';
 
 export default defineComponent({
   name: 'LoginForm',
@@ -43,7 +42,7 @@ export default defineComponent({
     }
   },
   methods: {
-    chageRoute(route: RouteLocationRaw){
+    chageRoute(route){
       router.push(route);
     },
     submitForm(){

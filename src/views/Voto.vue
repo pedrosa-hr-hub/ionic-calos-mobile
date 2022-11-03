@@ -11,7 +11,7 @@
     </ion-page>
   </template>
   
-  <script lang="ts">
+  <script>
   import { defineComponent } from 'vue';
   import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
   import VotoForm from '@/components/VotoForm.vue';
