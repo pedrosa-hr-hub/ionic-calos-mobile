@@ -19,6 +19,7 @@
   import { IonItem, IonButton } from '@ionic/vue';
   import { defineComponent } from 'vue';
   import router from '@/router';
+  import axios from 'axios';
   
   export default defineComponent({
     name: 'DadosComponent',

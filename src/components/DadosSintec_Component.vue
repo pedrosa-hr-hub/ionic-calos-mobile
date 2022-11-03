@@ -18,6 +18,7 @@
   <script>
   import { IonItem, IonButton } from '@ionic/vue';
   import { defineComponent } from 'vue';
+  import axios from 'axios';
   
   export default defineComponent({
     name: 'DadosSintecComponent',

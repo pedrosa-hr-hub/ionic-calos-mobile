@@ -72,7 +72,7 @@
     },
     submitForm(){
       axios.post('http://localhost:8000/voto', this.form)
-      .then((res) =>{
+      .then(() =>{
           this.chageRoute('/login');
       })
       .catch((error) => {
